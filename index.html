@@ -13,11 +13,41 @@
         </section>
         <section id="form-content">
             <form id="password-settings">
-                <div>
-                    <label for="pass-length-input">Password Length</label>
-                    <output id="pass-length-display"></output>
+                <div id="password-length-section">
+                    <div>
+                        <label for="pass-length-input">Password Length</label>
+                        <output id="pass-length-display"></output>
+                    </div>
+                    <input 
+                        type="range" 
+                        id="pass-length-input" 
+                        name="pass-length-input" 
+                        min="8" 
+                        max="128"
+                        input="updatePassLength()"
+                    >
                 </div>
-                <input type="range" id="pass-length-input" name="pass-length-input" min="8" max="128">
+                <div id="password-character-section">
+                    <p>Password Settings</p>
+                    <div>
+                        <div>
+                            <input type="checkbox" id="lowercase" name="lowercase" >
+                            <label for="lowercase">Lowercase (a-z)</label> 
+                        </div>
+                        <div>
+                            <input type="checkbox" id="uppercase" name="uppercase">
+                            <label for="uppercase">Uppercase (A-Z)</label> 
+                        </div>
+                        <div>
+                            <input type="checkbox" id="numbers" name="numbers">
+                            <label for="numbers">Numbers (0-9)</label> 
+                        </div>
+                        <div>
+                            <input type="checkbox" id="symbols" name="symbols">
+                            <label for="symbols">Symbols (0-9)</label> 
+                        </div>
+                    </div>
+                </div>
             </form>
         </section>
         <section id="button-area">
@@ -26,5 +56,6 @@
     </main>
 </body>
 <script src="./javascrpit-files/index.js"></script>
+<script src="./javascrpit-files/button-interactions.js"></script>
 <script src="./javascrpit-files/utils.js"></script>
 </html>
