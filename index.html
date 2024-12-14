@@ -6,8 +6,23 @@
     <title>Password Generator</title>
 </head>
 <body>
-    <h1 id="placeholder-header">Start</h1>
-    <button onclick= "changeHeader()">Change Heading</button>
+    <main>
+        <section id="form-header">
+            <h1 >Password Generator</h1>
+            <hr>
+        </section>
+        <section id="form-content">
+            <form id="password-settings">
+                <label for="pass-length-input">Password Length</label>
+                <output id="pass-length-display"></output>
+                <input type="range" id="pass-length-input" name="pass-length-input" min="8" max="128">
+            </form>
+        </section>
+        <section id="button-area">
+            <button onclick="generatePassword()">Generate New Password</button>
+        </section>
+    </main>
 </body>
-<script src="./index.js"></script>
+<script src="./javascrpit-files/index.js"></script>
+<script src="./javascrpit-files/utils.js"></script>
 </html>
