@@ -47,23 +47,43 @@ const randomSettingSelector = (setting) => {
             return getLowercaseChar();
         case 'uppercase':
             return getUppercaseChar();
+        case 'numbers':
+            return getNumber();
+        case 'symbols':
+            return getSymbolChar();
         default:
-            "something went wrong"
+            console.log("something went wrong");
     }
 }
 
-
+// Randomizer function
+const getRandomNumber = (min, max) => {
+    return Math.floor(Math.random() * (max-min) + min);
+}
 // Generates a random lower case letter
 const getLowercaseChar = () => {
-    let randomInt = Math.floor(Math.random() * (123-97) + 97);
-    return String.fromCharCode(randomInt);
+    return String.fromCharCode(getRandomNumber(97,123));
 }
 
 
 // Generates a random upper case letter
 const getUppercaseChar = () => {
-    let randomInt = Math.floor(Math.random() * (91-65) + 65);
-    return String.fromCharCode(randomInt);
+    return String.fromCharCode(getRandomNumber(65,91));
+}
+
+// Generates a random number
+const getNumber = () => {
+    return String.fromCharCode(getRandomNumber(48, 58));
+}
+
+
+// Generate a random symbol
+const getSymbolChar = () => {
+    if (getRandomNumber(0,2) === 0) {
+        return String.fromCharCode(getRandomNumber(32,48));
+    } else {
+        return String.fromCharCode(getRandomNumber(58,65));
+    }
 }
 
 
