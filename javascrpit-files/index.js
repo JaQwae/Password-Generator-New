@@ -1,10 +1,14 @@
 const generatePassword = () => {
+    // Resets password
+    password = [];
+
     let passwordSettings = getPasswordSettings(
         lowercaseInput, 
         uppercaseInput, 
         numbersInput, 
         symbolsInput
     )
+
     passwordRandomizer(getPasswordLength(), passwordSettings);
     displayPassword();
 }
@@ -29,6 +33,7 @@ const getPasswordSettings = (...args) => {
     return settings;
 }
 
+// Attaches random character to the password arr
 const passwordRandomizer = (...settings) => {
     const passwordLength = settings[0];
     const selectedSettings = settings[1];
@@ -56,15 +61,16 @@ const randomSettingSelector = (setting) => {
     }
 }
 
+
 // Randomizer function
 const getRandomNumber = (min, max) => {
     return Math.floor(Math.random() * (max-min) + min);
 }
+
 // Generates a random lower case letter
 const getLowercaseChar = () => {
     return String.fromCharCode(getRandomNumber(97,123));
 }
-
 
 // Generates a random upper case letter
 const getUppercaseChar = () => {
@@ -75,7 +81,6 @@ const getUppercaseChar = () => {
 const getNumber = () => {
     return String.fromCharCode(getRandomNumber(48, 58));
 }
-
 
 // Generate a random symbol
 const getSymbolChar = () => {
