@@ -30,6 +30,12 @@ const getPasswordSettings = (...args) => {
         }
     }
 
+    // If user do not select a value
+    if (settings.length === 0) {
+        // return alert("Please selected at least one password setting value");
+        errorDialogBox.showModal();
+    }
+
     return settings;
 }
 
@@ -107,3 +113,6 @@ const symbolsInput = document.querySelector("#symbols");
 
 // Password placeholder
 let password=[];
+
+// Dialog Box
+const errorDialogBox = document.getElementById("error-dialog-box");
