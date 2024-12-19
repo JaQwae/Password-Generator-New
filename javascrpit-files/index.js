@@ -30,12 +30,6 @@ const getPasswordSettings = (...args) => {
         }
     }
 
-    // If user do not select a value
-    if (settings.length === 0) {
-        // return alert("Please selected at least one password setting value");
-        errorDialogBox.showModal();
-    }
-
     return settings;
 }
 
@@ -44,6 +38,11 @@ const passwordRandomizer = (...settings) => {
     const passwordLength = settings[0];
     const selectedSettings = settings[1];
     const passSetArrLen = selectedSettings.length
+
+    // If user do not select a value
+    if(selectedSettings.length === 0) {
+        return displayError("Please selected at least one password setting");
+    }
 
     for (let i=0; i<passwordLength; i++) {
         let char = randomSettingSelector(selectedSettings[Math.floor(Math.random() * passSetArrLen)])
@@ -102,6 +101,11 @@ const displayPassword = () => {
     document.getElementById("generated-password")
         .innerHTML = password
         .join(" ").replaceAll(" ", "");
+}
+
+const displayError = (message) => {
+    document.getElementById("error-message").innerHTML = message;
+    errorDialogBox.showModal();
 }
 
 
