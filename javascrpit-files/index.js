@@ -10,7 +10,6 @@ const generatePassword = () => {
     )
 
     passwordRandomizer(getPasswordLength(), passwordSettings);
-    displayPassword();
 }
 
 
@@ -42,12 +41,17 @@ const passwordRandomizer = (...settings) => {
     // If user do not select a value
     if(selectedSettings.length === 0) {
         return displayError("Please selected at least one password setting");
+
+    } else {
+        for (let i=0; i<passwordLength; i++) {
+            let char = randomSettingSelector(selectedSettings[Math.floor(Math.random() * passSetArrLen)])
+            password.push(char);
+        }
+
+        hideSections('showPassword');
+        displayPassword();
     }
 
-    for (let i=0; i<passwordLength; i++) {
-        let char = randomSettingSelector(selectedSettings[Math.floor(Math.random() * passSetArrLen)])
-        password.push(char);
-    }
 }
 
 // Handles which character generator will be call
@@ -68,31 +72,35 @@ const randomSettingSelector = (setting) => {
 
 
 // Randomizer function
-const getRandomNumber = (min, max) => {
+const getRandomChar = (min, max) => {
     return Math.floor(Math.random() * (max-min) + min);
 }
 
+
 // Generates a random lower case letter
 const getLowercaseChar = () => {
-    return String.fromCharCode(getRandomNumber(97,123));
+    return String.fromCharCode(getRandomChar(97,123));
 }
+
 
 // Generates a random upper case letter
 const getUppercaseChar = () => {
-    return String.fromCharCode(getRandomNumber(65,91));
+    return String.fromCharCode(getRandomChar(65,91));
 }
+
 
 // Generates a random number
 const getNumber = () => {
-    return String.fromCharCode(getRandomNumber(48, 58));
+    return String.fromCharCode(getRandomChar(48, 58));
 }
+
 
 // Generate a random symbol
 const getSymbolChar = () => {
-    if (getRandomNumber(0,2) === 0) {
-        return String.fromCharCode(getRandomNumber(32,48));
+    if (getRandomChar(0,2) === 0) {
+        return String.fromCharCode(getRandomChar(32,48));
     } else {
-        return String.fromCharCode(getRandomNumber(58,65));
+        return String.fromCharCode(getRandomChar(58,65));
     }
 }
 
@@ -102,6 +110,7 @@ const displayPassword = () => {
         .innerHTML = password
         .join(" ").replaceAll(" ", "");
 }
+
 
 const displayError = (message) => {
     document.getElementById("error-message").innerHTML = message;

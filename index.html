@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Generator</title>
+    <link rel="stylesheet" href="./assets/style.css"/>
 </head>
 <body>
     <main>
@@ -65,11 +66,22 @@
                     </div>
                 </div>
             </form>
+            <div id="password-display" class="hidden">
+                <p id="generated-password"></p>
+            </div>
         </section>
         <section id="button-area">
-            <button onclick="generatePassword()">Generate New Password</button>
+            <button 
+                id="generate-password-home-btn" 
+                onclick="generatePassword()"
+            >
+                Generate New Password
+            </button>
+            <div id="next-action-btn-container" class="hidden">
+                <button onclick="generatePassword()">Get New Password</button>
+                <button onclick="hideSections('startOver')">Change Settings</button>
+            </div>
         </section>
-        <p id="generated-password"></p>
         <dialog id="error-dialog-box">
             <p id="error-message"></p>
             <button id="close-error-dialog-btn">Dismiss</button>

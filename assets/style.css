@@ -1,0 +1,4 @@
+/* Hides elements that are not being used */
+.hidden {
+    display: none;
+}
