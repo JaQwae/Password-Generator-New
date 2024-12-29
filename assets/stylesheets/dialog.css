@@ -1,0 +1,27 @@
+#error-dialog-box {
+    height: 50%;
+    width: 50%;
+    text-align: center;
+    position: relative;
+    padding: 0em;
+    background-color: var(--secondary-color);
+    border: none;
+    box-shadow: var(--drop-shadow);
+}
+
+#error-dialog-box div {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+#error-dialog-box::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+#error-message {
+    font-size: 1.3em;
+    color: var(--accent-color);
+}
