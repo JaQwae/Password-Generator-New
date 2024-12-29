@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Generator</title>
-    <link rel="stylesheet" href="./assets/style.css"/>
+    <link rel="stylesheet" href="./assets/stylesheets/main.css"/>
+    <link rel="stylesheet" href="./assets/stylesheets/form-sections.css"/>
+    <link rel="stylesheet" href="./assets/stylesheets/buttons.css"/>
+    <link rel="stylesheet" href="./assets/stylesheets/dialog.css"/>
 </head>
 <body>
+    <img src="./assets/bike-lock-password.png" alt="A bike lock with the combination password in it.">
     <main>
-        <section id="form-header">
+        <section id="form-header" class="form-sections">
             <h1 >Password Generator</h1>
             <hr>
         </section>
-        <section id="form-content">
+        <section id="form-content" class="form-sections">
             <form id="password-settings">
-                <div id="password-length-section">
+                <div id="password-length-section" class="password-settings-sections">
                     <div>
                         <label for="pass-length-input">Password Length</label>
                         <output id="pass-length-display"></output>
@@ -25,13 +29,14 @@
                         name="pass-length-input" 
                         min="8" 
                         max="128"
+                        value="8"
                         input="updatePassLength()"
                     >
                 </div>
-                <div id="password-character-section">
+                <div id="password-character-section" class="password-settings-sections">
                     <p>Password Settings</p>
                     <div>
-                        <label>
+                        <label class="checkboxes">
                             <input
                                 type="checkbox"
                                 id="lowercase"
@@ -39,7 +44,7 @@
                             /> 
                             Lowercase (a-z)
                         </label>
-                        <label>
+                        <label class="checkboxes">
                             <input 
                                 type="checkbox" 
                                 id="uppercase" 
@@ -47,7 +52,7 @@
                             /> 
                             Uppercase (A-Z)
                         </label>
-                        <label>
+                        <label class="checkboxes">
                             <input
                                 type="checkbox" 
                                 id="numbers" 
@@ -55,8 +60,8 @@
                             /> 
                             Numbers (0-9)
                         </label>
-                        <label>
-                            <input 
+                        <label class="checkboxes">
+                            <input
                                 type="checkbox" 
                                 id="symbols" 
                                 name="symbols" 
@@ -70,25 +75,25 @@
                 <p id="generated-password"></p>
             </div>
         </section>
-        <section id="button-area">
+        <section id="button-area" class="form-sections">
             <button 
                 id="generate-password-home-btn" 
                 onclick="generatePassword()"
+                class="btns"
             >
                 Generate New Password
             </button>
             <div id="next-action-btn-container" class="hidden">
-                <button onclick="generatePassword()">Get New Password</button>
-                <button onclick="hideSections('startOver')">Change Settings</button>
+                <button class="btns" onclick="generatePassword()">Get New Password</button>
+                <button class="btns" onclick="hideSections('startOver')">Change Settings</button>
             </div>
         </section>
         <dialog id="error-dialog-box">
             <p id="error-message"></p>
-            <button id="close-error-dialog-btn">Dismiss</button>
+            <button id="close-error-dialog-btn" class="btns">Dismiss</button>
         </dialog>
     </main>
 </body>
 <script src="./javascrpit-files/index.js"></script>
 <script src="./javascrpit-files/button-interactions.js"></script>
-<script src="./javascrpit-files/utils.js"></script>
 </html>

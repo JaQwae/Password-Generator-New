@@ -1,0 +1,87 @@
+/* Password length toggle */
+#pass-length-input{
+    -webkit-appearance: none;
+    appearance: none; 
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    border-radius: 15px;
+    height: 0.7em;
+    background: var(--accent-color);
+}
+
+#pass-length-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none; 
+    height: 2.2em;
+    width: 2.2em;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    border: none;
+    transition: .2s ease-in-out;
+}
+
+#pass-length-input::-moz-range-thumb {
+    height: 2.2em;
+    width: 2.2em;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    border: none;
+    transition: .2s ease-in-out;
+}
+
+#pass-length-input::-webkit-slider-thumb:hover {
+    box-shadow: 0 0 0 10px rgba(255,85,0, .1)
+}
+
+#pass-length-input:active::-webkit-slider-thumb {
+    box-shadow: 0 0 0 13px rgba(255,85,0, .2)
+}
+
+#pass-length-input:focus::-webkit-slider-thumb {
+    box-shadow: 0 0 0 13px rgba(255,85,0, .2)
+}
+
+#pass-length-input::-moz-range-thumb:hover {
+    box-shadow: 0 0 0 10px rgba(255,85,0, .1)
+}
+
+#pass-length-input:active::-moz-range-thumb {
+    box-shadow: 0 0 0 13px rgba(255,85,0, .2)
+}
+
+#pass-length-input:focus::-moz-range-thumb {
+    box-shadow: 0 0 0 13px rgba(255,85,0, .2)    
+}
+
+/* Password settings checkboxes */
+.checkboxes{
+    accent-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.checkboxes input{
+    cursor: pointer;
+    transform: scale(1.5);
+    margin-right: 1em;
+    box-shadow: var(--drop-shadow);
+}
+
+.btns {
+    outline: inherit;
+    cursor: pointer;
+    border: none;
+    font-size: 1em;
+    font-weight: 500;
+    background: var(--primary-color);
+    color:var(--accent-color);
+    border-radius: 10px;
+    padding: 1em;
+}
+
+.btns:hover, .btns:focus{
+    color: var(--primary-color);
+    background-color: var(--accent-color);
+    scale: 1.05;
+    transition: .2s ease-in-out;
+}

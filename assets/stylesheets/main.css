@@ -1,0 +1,45 @@
+/* Global variables */
+:root{
+    --primary-color: #650E15;
+    --secondary-color:#4b0a0e;
+    --accent-color:#FFFFFF;
+    --interactive-color: rgba(255,85,0, .2);
+    --drop-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* Hides elements that are not being used */
+.hidden {
+    display: none;
+}
+
+body {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    overflow: hidden;
+}
+
+/* Bicycle lock background image */
+img {
+    position: absolute;
+    bottom:-22em;
+    right:-5em;
+    z-index: -1;
+    height: 60em;
+    width: 70em;
+}
+
+main {
+    background-color: var(--secondary-color);
+    height: 70vh;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0em 1.5em;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}

@@ -3,7 +3,12 @@ let passLengthDisplay = document.querySelector("#pass-length-display");
 let passLengthInput = document.querySelector("#pass-length-input");
 passLengthDisplay.textContent = passLengthInput.value
 passLengthInput.addEventListener("input", (event) => {
+    // Updates numeric value for length
     passLengthDisplay.textContent = event.target.value;
+
+    // Handles slider coloring
+    const progress = (event.target.value / passLengthInput.max) * 100;
+    passLengthInput.style.background = `linear-gradient(to right, #650E15 ${progress}%, #FFFFFF ${progress}%)`;
 })
 
 
