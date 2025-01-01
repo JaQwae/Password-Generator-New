@@ -10,6 +10,7 @@
     background: var(--accent-color);
 }
 
+    /* Password toggle circle */
 #pass-length-input::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none; 
@@ -22,6 +23,7 @@
 }
 
 #pass-length-input::-moz-range-thumb {
+    appearance: none; 
     height: 2.2em;
     width: 2.2em;
     background-color: var(--primary-color);
@@ -67,6 +69,7 @@
     box-shadow: var(--drop-shadow);
 }
 
+/* All action button styles */
 .btns {
     outline: inherit;
     cursor: pointer;

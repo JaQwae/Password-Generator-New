@@ -32,6 +32,7 @@ img {
     width: 70em;
 }
 
+/*Container in which the form is housed in */
 main {
     background-color: var(--secondary-color);
     height: 70vh;
@@ -42,7 +43,7 @@ main {
     align-items: center;
     padding: 0em 1.5em;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    max-width: 80%;
+    max-width: 50%;
 }
 
 /* Tablet sizing */
