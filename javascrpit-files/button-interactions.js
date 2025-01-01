@@ -41,6 +41,12 @@ const hideSections = (action) => {
     }
 }
 
+const copyPassword = () => {
+    const password = document.getElementById("generated-password").value;
+    navigator.clipboard.writeText(password);
+    alert(password);
+}
+
 // Section containers
 const passwordSettingContainer = document.getElementById('password-settings');
 const generatePasswordHomeBtn = document.getElementById('generate-password-home-btn');
