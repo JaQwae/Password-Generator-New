@@ -27,12 +27,14 @@ const hideSections = (action) => {
             generatePasswordHomeBtn.classList.add('hidden');
             passwordDisplayContainer.classList.remove('hidden');
             nextActionBtnContainer.classList.remove('hidden');
+            formContentContainer.classList.add('form-content-password');
             break;
         case 'startOver':
             passwordSettingContainer.classList.remove('hidden');
             generatePasswordHomeBtn.classList.remove('hidden');
             passwordDisplayContainer.classList.add('hidden');
             nextActionBtnContainer.classList.add('hidden');
+            formContentContainer.classList.remove('form-content-password');
             break;
         default:
             console.log('Something went wrong');
@@ -44,3 +46,4 @@ const passwordSettingContainer = document.getElementById('password-settings');
 const generatePasswordHomeBtn = document.getElementById('generate-password-home-btn');
 const passwordDisplayContainer = document.getElementById('password-display');
 const nextActionBtnContainer = document.getElementById('next-action-btn-container');
+const formContentContainer = document.getElementById('form-content');
