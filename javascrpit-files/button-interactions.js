@@ -12,10 +12,10 @@ passLengthInput.addEventListener("input", (event) => {
 })
 
 
-// Close error modal screen
-const closeErrorDialogBtn = document.getElementById('close-error-dialog-btn');
-closeErrorDialogBtn.addEventListener('click', () => {
-    document.getElementById("error-dialog-box").close();
+// Close modal screen
+const closeDialogBoxBtn = document.getElementById('close-dialog-box-btn');
+closeDialogBoxBtn.addEventListener('click', () => {
+    document.getElementById("dialog-box").close();
 })
 
 
@@ -44,7 +44,7 @@ const hideSections = (action) => {
 const copyPassword = () => {
     const password = document.getElementById("generated-password").value;
     navigator.clipboard.writeText(password);
-    alert(password);
+    displayDialogMessage("Password successfully copied")
 }
 
 // Section containers

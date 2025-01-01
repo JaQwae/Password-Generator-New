@@ -40,7 +40,7 @@ const passwordRandomizer = (...settings) => {
 
     // If user do not select a value
     if(selectedSettings.length === 0) {
-        return displayError("Please selected at least one password setting");
+        return displayDialogMessage("Please selected at least one password setting");
 
     } else {
         for (let i=0; i<passwordLength; i++) {
@@ -112,9 +112,9 @@ const displayPassword = () => {
 }
 
 
-const displayError = (message) => {
-    document.getElementById("error-message").innerHTML = message;
-    errorDialogBox.showModal();
+const displayDialogMessage = (message) => {
+    document.getElementById("dialog-box-message").innerHTML = message;
+    dialogBox.showModal();
 }
 
 
@@ -128,4 +128,4 @@ const symbolsInput = document.querySelector("#symbols");
 let password=[];
 
 // Dialog Box
-const errorDialogBox = document.getElementById("error-dialog-box");
+const dialogBox = document.getElementById("dialog-box");

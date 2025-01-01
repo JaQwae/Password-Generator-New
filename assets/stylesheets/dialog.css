@@ -1,4 +1,4 @@
-#error-dialog-box {
+#dialog-box {
     height: 50%;
     width: 50%;
     text-align: center;
@@ -9,19 +9,19 @@
     box-shadow: var(--drop-shadow);
 }
 
-#error-dialog-box div {
+#dialog-box div {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     width: 100%;
 }
 
-#error-dialog-box::backdrop {
+#dialog-box::backdrop {
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(5px);
 }
 
-#error-message {
+#dialog-box-message {
     font-size: 1.3em;
     color: var(--accent-color);
 }
