@@ -43,7 +43,12 @@ main {
     align-items: center;
     padding: 0em 1.5em;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    max-width: 50%;
+    max-width: 80%;
 }
 
 /* Tablet sizing */
+@media screen and (max-width: 1024px) {
+    main {
+        padding: 0em 2.5em;
+    }
+}

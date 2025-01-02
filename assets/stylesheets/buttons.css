@@ -89,3 +89,10 @@
     scale: 1.05;
     transition: .2s ease-in-out;
 }
+
+/* Tablet sizing */
+@media screen and (max-width: 1024px) {
+    .btns {
+        font-size: 0.8em;
+    }
+}

@@ -89,3 +89,15 @@
 #button-area{
     min-height: 20%;
 }
+
+/* Tablet sizing */
+@media screen and (max-width: 1024px) {
+    #form-header {
+        min-height: 20%;
+        flex-direction: column;
+    }
+
+    #button-area{
+        min-height: 20%;
+    }
+}
