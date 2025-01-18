@@ -52,3 +52,24 @@ main {
         padding: 0em 2.5em;
     }
 }
+
+/* Mobile sizing */
+@media screen and (max-width: 480px) {
+    body {
+        overflow-x: hidden;
+        overflow-y: hidden;
+        margin: 0;
+    }
+
+    main {
+        width: 100vw;
+        opacity: 0.95;
+        margin: 0;
+        padding: 0em 1em;
+    }
+
+    img {
+        bottom:-22em;
+        right:-18em;
+    }
+}

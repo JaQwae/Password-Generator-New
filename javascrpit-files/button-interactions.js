@@ -27,6 +27,7 @@ const hideSections = (action) => {
             generatePasswordHomeBtn.classList.add('hidden');
             passwordDisplayContainer.classList.remove('hidden');
             nextActionBtnContainer.classList.remove('hidden');
+            nextActionBtnContainer.style.display ='flex'
             formContentContainer.classList.add('form-content-password');
             break;
         case 'startOver':
@@ -34,6 +35,7 @@ const hideSections = (action) => {
             generatePasswordHomeBtn.classList.remove('hidden');
             passwordDisplayContainer.classList.add('hidden');
             nextActionBtnContainer.classList.add('hidden');
+            nextActionBtnContainer.style.removeProperty('display')
             formContentContainer.classList.remove('form-content-password');
             break;
         default:
