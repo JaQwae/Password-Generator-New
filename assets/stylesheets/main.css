@@ -55,7 +55,9 @@ main {
 
 /* Mobile sizing */
 @media screen and (max-width: 480px) {
-    body {
+    html, body {
+        max-width: 100%;
+        max-height: 100;
         overflow-x: hidden;
         overflow-y: hidden;
         margin: 0;

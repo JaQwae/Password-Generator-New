@@ -25,3 +25,23 @@
     font-size: 1.3em;
     color: var(--accent-color);
 }
+
+/* Tablet sizing */
+@media screen and (max-width: 1024px) {
+    #dialog-box {
+        width: 70%
+    }
+}
+
+/* Mobile sizing */
+@media screen and (max-width: 480px) {
+    #dialog-box {
+        width: 80%;
+        height: 40%;
+    }
+
+    #dialog-box-message {
+        padding: 0.5em;
+        font-size: 1.1em;
+    }
+}
