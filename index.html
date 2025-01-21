@@ -78,15 +78,15 @@
         <section id="button-area" class="form-sections">
             <button 
                 id="generate-password-home-btn" 
-                onclick="generatePassword()"
+                onclick="generatePassword(); scrollToBeginning();"
                 class="btns"
             >
                 Generate New Password
             </button>
             <div id="next-action-btn-container" class="hidden">
                 <button class="btns next-action-btns" onclick="generatePassword()">Get New Password</button>
-                <button class="btns next-action-btns" onclick="copyPassword()">Copy Password</button>
-                <button class="btns next-action-btns" onclick="hideSections('startOver')">Change Settings</button>
+                <button class="btns next-action-btns" onclick="copyPassword(); scrollToBeginning();">Copy Password</button>
+                <button class="btns next-action-btns" onclick="hideSections('startOver'); scrollToBeginning();">Change Settings</button>
             </div>
         </section>
         <dialog id="dialog-box">

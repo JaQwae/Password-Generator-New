@@ -43,12 +43,15 @@ const hideSections = (action) => {
     }
 }
 
-
 // Allows user to copy their generated password
 const copyPassword = () => {
     const password = document.getElementById("generated-password").value;
     navigator.clipboard.writeText(password);
     displayDialogMessage("Password successfully copied");
+}
+
+const scrollToBeginning = () => {
+    document.getElementById('form-header').scrollIntoView({ behavior: 'smooth' }); 
 }
 
 
