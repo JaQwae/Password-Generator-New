@@ -68,6 +68,7 @@
     /* Password settings container */
 #password-character-section {
     height: 70%;
+
 }
 
     /* Password checkboxes container */
@@ -115,5 +116,38 @@
     #password-length-section div >*,  #password-character-section p {
         font-size: 1em;
         padding: 0em;
+    }
+}
+
+/* Mobile sizing landscape*/
+@media (orientation: landscape) and (max-width: 1000px) {
+    #form-header {
+        min-height: 20%;
+    }
+
+    #form-header h1 {
+        font-size: 2em;
+    }
+
+    #form-header hr {
+        width: 18em;
+    }
+
+    #form-content {
+        min-height: 60%;
+    }
+
+    #password-length-section div >*,  #password-character-section p {
+        font-size: 1.2em;
+        padding: 0em;
+        margin: 0em;
+    }
+
+    #password-character-section {
+        height: 70%;
+    }
+
+    #button-area{
+        min-height: 20%;
     }
 }

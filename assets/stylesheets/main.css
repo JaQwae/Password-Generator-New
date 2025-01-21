@@ -57,7 +57,7 @@ main {
 @media screen and (max-width: 480px) {
     html, body {
         max-width: 100%;
-        max-height: 100;
+        max-height: 100%;
         overflow-x: hidden;
         overflow-y: hidden;
         margin: 0;
@@ -73,5 +73,15 @@ main {
     img {
         bottom:-22em;
         right:-18em;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 1000px) {
+    main{
+        height: 95vh;
+    }
+
+    html, body {
+        overflow-y: auto;
     }
 }
