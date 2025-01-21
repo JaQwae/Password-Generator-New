@@ -45,3 +45,10 @@
         font-size: 1.1em;
     }
 }
+
+/* Mobile sizing landscape*/
+@media (orientation: landscape) and (max-width: 1000px) {
+    #dialog-box {
+        width: 50%;
+    }
+}
